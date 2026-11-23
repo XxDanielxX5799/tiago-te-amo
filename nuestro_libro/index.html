@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#24182e">
+  <title>Sin buscarte, te encontré ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="book" id="book">
+    <div class="topbar"><span class="brand">♡ Nuestra historia</span><button id="musicBtn" class="quiet" type="button" title="Música opcional">♫ Música: apagada</button></div>
+    
+    <div class="progress" aria-label="Progreso del libro"><div id="progressFill"></div></div>
+    <section id="page" class="page" aria-live="polite"></section>
+    <nav class="controls" aria-label="Navegación">
+      <button id="prevBtn" class="secondary" type="button">← Anterior</button>
+      <span id="counter"></span>
+      <audio id="musica" src="musica.mp3" autoplay loop></audio>
+      <button id="nextBtn" type="button">Siguiente →</button>
+    </nav>
+  </main>
+  <div id="hearts" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

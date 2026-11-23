@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+:root{--bg:#1b1425;--paper:#fff9f5;--ink:#463447;--muted:#806c7c;--rose:#d77d9c;--accent:#ad577e;--line:#eddce3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 20% 10%,#4c2d50 0%,transparent 42%),radial-gradient(ellipse at 90% 90%,#3b244c 0%,transparent 45%),var(--bg);font-family:'DM Sans',Arial,sans-serif;color:var(--ink);display:flex;justify-content:center;align-items:center;padding:28px 14px}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.6;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#f7bed1 1px,transparent 1px);background-size:83px 83px,137px 137px;background-position:8px 13px,45px 70px}
+.book{position:relative;width:min(100%,850px);min-height:650px;background:var(--paper);border:1px solid #f9dce5;border-radius:24px;box-shadow:0 25px 90px #0006;overflow:hidden;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 30px 14px;gap:10px}.brand{font-weight:700;color:var(--accent);letter-spacing:.05em;font-size:.9rem}.quiet{background:transparent;color:var(--muted);border:1px solid var(--line);font-size:.78rem;padding:8px 12px}
+.progress{height:4px;background:#f1e2e7}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#e9a9bd,#a6537a);transition:width .4s}
+.page{flex:1;min-height:480px;padding:38px clamp(22px,7vw,75px) 35px;animation:appear .55s ease both;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:17px}.ornament{font-size:3.5rem;color:var(--rose);margin-bottom:14px;filter:drop-shadow(0 6px 8px #dfb0c1)}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600}h1{font-size:clamp(2.9rem,8vw,5rem);line-height:1.12;margin:5px 0 20px}h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;margin:0 0 25px}h3{font-size:1.35rem}.subtitle{font-size:1.08rem;line-height:1.8;color:var(--muted);max-width:570px}.prose{width:100%;max-width:640px;text-align:left;font-size:1.04rem;line-height:1.95;color:#574657}.prose p{margin:0 0 20px}.prose p:last-child{margin-bottom:0}.highlight{color:var(--accent);font-weight:700}.quote{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.35rem,3.4vw,2rem);line-height:1.6;color:#8f4c70;max-width:610px}.divider-heart{margin:22px 0;color:var(--rose)}
+.chapter{justify-content:flex-start;padding-top:45px}.chapter .prose{margin-top:5px}.letter{justify-content:flex-start;padding-top:42px}.letter .prose{max-width:670px}.letter h2{margin-bottom:26px}.smallnote{font-size:.84rem;color:var(--muted);margin-top:15px}.memory-list{width:100%;max-width:590px;display:grid;gap:13px;margin:10px 0 20px}.memory{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 19px;text-align:left;box-shadow:0 4px 15px #a35e7c0b}.memory strong{display:block;color:var(--accent);margin-bottom:6px}.memory p{margin:0;line-height:1.6;color:var(--muted)}
+button{font:inherit;cursor:pointer;border:0;border-radius:100px;padding:12px 23px;background:var(--accent);color:white;font-weight:700;transition:transform .2s,background .2s}button:hover:not(:disabled){transform:translateY(-2px);background:#934567}button:focus-visible{outline:3px solid #efb1cc;outline-offset:3px}button:disabled{opacity:.4;cursor:default}.secondary{background:#f4e8ed;color:#8d5071}.secondary:hover:not(:disabled){background:#ead6df}.controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:17px 30px 25px;border-top:1px solid var(--line)}#counter{color:var(--muted);font-size:.82rem;white-space:nowrap}.cta{margin-top:25px;padding:15px 32px}.heart-big{font-size:4.5rem;animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.13)}}.floating-heart{position:fixed;bottom:-40px;pointer-events:none;animation:floatUp 5s linear forwards;color:#e99cbb;font-size:22px;z-index:5}@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:600px){body{padding:10px 8px;align-items:stretch}.book{border-radius:17px;min-height:calc(100dvh - 20px)}.topbar{padding:16px 17px 13px}.page{min-height:0;padding:32px 24px 30px}.chapter,.letter{padding-top:35px}.prose{font-size:.99rem;line-height:1.85}.controls{padding:15px 13px 20px}.controls button{padding:11px 14px;font-size:.84rem}.brand{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Decoración romántica y fotografías anime */
+.music-picker{padding:0 30px 13px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:.78rem;color:#87516d}
+.music-picker label{font-weight:700}.music-picker label span{font-weight:400}
+.music-picker input{max-width:215px;font-size:.75rem}
+.anime-photo{display:block;width:min(100%,430px);max-height:280px;object-fit:cover;object-position:center 45%;border:7px solid white;border-radius:19px;box-shadow:0 12px 32px #8e517b38;margin:10px auto 25px}
+.page:has(.anime-photo) .subtitle{margin-top:0}
+.flower-heart{width:min(90vw,430px);min-height:290px;margin:22px auto 10px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;filter:drop-shadow(0 10px 25px #c76d9d55);animation:pulse 3s ease-in-out infinite}
+.flower-heart::before{content:'♥';position:absolute;inset:-75px 0 0;z-index:0;font-size:clamp(260px,58vw,410px);line-height:1;color:#ed8eb5;text-shadow:0 0 25px #fbd2e8,0 0 50px #ec9bc1}
+.flower-heart::after{content:'🌸🌹🌸';position:absolute;bottom:5px;font-size:2.5rem;letter-spacing:13px;z-index:1}
+.flower-ring{position:relative;z-index:2;font-size:1.9rem;max-width:360px;line-height:1.8}
+.tiago-name{position:relative;z-index:2;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-style:italic;color:white;font-size:clamp(3.3rem,12vw,5.5rem);text-shadow:0 3px 15px #923f73}
+.tiago-love{position:relative;z-index:2;font-size:1.1rem;color:white;letter-spacing:.25em;font-weight:700;text-shadow:0 2px 8px #923f73}
+@media(max-width:600px){.music-picker{padding:0 14px 10px}.anime-photo{max-height:225px}.flower-heart{min-height:270px}.flower-ring{font-size:1.3rem}}
+.page {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* CENTRAR TODOS LOS TEXTOS */
+
+.page {
+    text-align: center !important;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+    text-align: center !important;
+}
+
+.page p {
+    text-align: center !important;
+}
+
+.prose {
+    text-align: center !important;
+}
+
+.prose p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    text-align: center !important;
+}
+
+.eyebrow {
+    text-align: center !important;
+}
+
+.memory,
+.memory p,
+.memory strong {
+    text-align: center !important;
+}
+
+.letter {
+    text-align: center !important;
+}
+
+/* CENTRAR Y AMPLIAR EL CONTENIDO */
+
+.page {
+    width: 100%;
+    text-align: center !important;
+    box-sizing: border-box;
+}
+
+.page h1,
+.page h2,
+.page p {
+    text-align: center !important;
+}
+
+/* PÁRRAFOS DE LOS CAPÍTULOS */
+
+.prose {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+.prose p {
+    text-align: center !important;
+}
+
+/* TARJETAS DE RECUERDOS */
+
+.memory-list {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.memory {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center !important;
+    margin: 12px auto;
+    padding: 20px;
+}
+
+.memory strong,
+.memory p {
+    text-align: center !important;
+}
+
+/* PORTADA Y PÁGINA FINAL */
+
+/* Títulos de portada y final */
+.page h1,
+.page:has(.flower-heart) h2 {
+    font-size: clamp(32px, 5vw, 55px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 20px auto !important;
+    max-width: 750px;
+}
+
+/* Texto de portada y final */
+.page .subtitle {
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+    line-height: 1.8 !important;
+}
+
+/* Fotografías */
+.page .anime-photo {
+    display: block;
+    width: 100%;
+    max-width: 450px !important;
+    max-height: 280px !important;
+    object-fit: cover;
+    margin: 15px auto 25px !important;
+}
+
+/* Botón de portada */
+.page .cta {
+    display: block;
+    width: fit-content;
+    margin: 25px auto !important;
+}
+
+/* Corazón final */
+.flower-heart {
+    margin: 20px auto !important;
+    transform: scale(0.85);
+    transform-origin: center;
+}
+
+/* Nombre de Tiago */
+.tiago-name {
+    text-align: center !important;
+}
+
+/* Dedicatoria final */
+.page .quote {
+    max-width: 750px !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .page h1,
+    .page:has(.flower-heart) h2 {
+        font-size: 34px !important;
+    }
+
+    .page .anime-photo {
+        max-height: 230px !important;
+    }
+
+    .flower-heart {
+        transform: scale(0.75);
+    }
+}

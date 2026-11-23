@@ -1,0 +1,14 @@
+SIN BUSCARTE, TE ENCONTRÉ — PARA TIAGO
+
+Abre index.html en Chrome o Edge. Usa Siguiente y Anterior.
+
+IMAGEN: incluye una ilustración original anime de dos chicos besándose.
+FINAL: corazón gigante de flores con el nombre TIAGO.
+
+MÚSICA: la canción comercial "Amor de Cine" de Umbel NO está incluida por derechos de autor.
+Para reproducirla, agrega una copia de audio que tengas permiso de usar como "musica.mp3" en esta carpeta; luego pulsa el botón de música.
+También puedes pulsar "Elegir archivo" en la barra superior y seleccionar el audio desde tu computadora.
+El navegador necesita una interacción para iniciar la reproducción.
+
+Edita los textos en script.js y los colores en style.css.
+Para compartirlo por enlace puedes publicarlo en un hosting estático; el selector de audio es local al dispositivo de quien abre el libro.
